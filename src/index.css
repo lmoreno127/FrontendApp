@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kalam&display=swap");
+h2 {
+  font-family: "Permanent Marker", cursive;
+  margin-left: 224px;
+  margin-top: 35px;
+  font-size: 5em;
+  margin-right: 60px;
+}
+body {
+  font-family: "Kalam", cursive;
+  background-color: #8bccb7;
+}
 #logo {
   width: 4em;
   margin-top: 30px;
@@ -11,10 +24,63 @@ form {
 input {
   width: 20em;
 }
-.container {
-  margin-top: 60px;
+.form-control {
+  font-size: 2em;
 }
+/* .container {
+  margin-top: 60px;
+  display: flex;
+  margin-left: 0;
+} */
 li {
   float: left;
   list-style-type: none;
+}
+.card {
+  width: 52rem;
+}
+ul {
+  margin-top: 4em;
+  margin-left: 35em;
+}
+.user-card-container {
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+    0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -7px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+    0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -7px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  min-height: 420px;
+  margin: 0 auto 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.user-info {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  text-align: right;
+  /* padding: 30px 20px 30px 0; */
+  z-index: 1;
+}
+h4 {
+  text-align: center;
+  margin-right: 60px;
+  font-size: 2.5rem;
+}
+.user-info button {
+  width: 180px;
+}
+.btn {
+  font-size: 2rem;
+}
+.page-link {
+  font-size: 2em;
+  background-color: #8bccb7;
+  border-style: none;
+  color: black;
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
 import User from "./components/User";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -10,13 +9,14 @@ class Main extends React.Component {
   constructor() {
     super();
     this.state = { users: [], search: "", currentPage: 1 };
-    this.usersPerPage = 6;
+    this.usersPerPage = 4;
   }
   componentDidMount() {
     fetch(`https://torre.bio/api/people?q=andres`)
       .then(res => res.json())
       .then(datajson => {
         this.setState({ users: datajson });
+        console.log(datajson);
       })
       .catch(function(err) {
         console.log(err);
@@ -24,7 +24,6 @@ class Main extends React.Component {
   }
   handleChange = event => {
     this.setState({ search: event.target.value, currentPage: 1 });
-    console.log(this.state.search);
   };
   handleSubmit = event => {
     event.preventDefault();
@@ -73,7 +72,11 @@ class Main extends React.Component {
     });
     return (
       <div>
-        <img id="logo" src="https://torre.co/img/torre-icon.4072131f.png" />
+        <img
+          id="logo"
+          src="https://torre.co/img/torre-icon.4072131f.png"
+          alt="torre logo"
+        />
         <Form onSubmit={this.handleSubmit}>
           <Row>
             <Col>
@@ -89,11 +92,11 @@ class Main extends React.Component {
             </Col>
           </Row>
         </Form>
-        <Container>
-          {currentUsers.map((user, i) => (
-            <User key={i} user={user} />
-          ))}
-        </Container>
+        {/* <Container> */}
+        {currentUsers.map((user, i) => (
+          <User key={i} user={user} />
+        ))}
+        {/* </Container> */}
         <ul id="page-numbers">{renderPageNumbers}</ul>
       </div>
     );
